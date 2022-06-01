@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int t; cin>>t; while(t--){
+        int num; cin>>num;
+        if(num>0) cout<<"Positive Number"<<endl;
+        else if(num<0) cout<<"Negative Number"<<endl;
+        else if(num==0) cout<<"Zero"<<endl;
+    }
+    return 0;
+}
