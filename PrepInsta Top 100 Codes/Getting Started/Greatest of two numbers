@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int tc; cin>>tc; while(tc--){
+        int num1, num2; cin>>num1>>num2;
+        //By using if-else:
+        if(num1>num2) {
+            cout<<num1<<endl;
+        }
+        else if(num2>num1) {
+            cout<<num2<<endl;
+        }
+        else {
+            cout<<"Equal"<<endl;
+        }
+        //T.C=O(1) and S.C=O(1)
+        
+        //By using inBuilt function i.e. max():
+        //cout<<max(num1,num2)<<endl;
+        //T.C=O(1) and S.C=O(1)
+        
+        //By using Ternary Operator/Conditional Operator:
+        // int largest;
+        // if(num1==num2) {
+        //     cout<<"Equal"<<endl;
+        // }
+        // else {
+        //     largest = num1 > num2 ? num1 : num2;
+        //     cout<<largest<<endl;
+        // }
+        //T.C=O(1) and S.C=O(1)
+        
+    }
+    return 0;
+}
