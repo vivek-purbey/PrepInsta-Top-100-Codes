@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        int num; cin>>num;
+        int sum=0;
+        while(num!=0) {
+            int rem=num%10; //last digit
+            sum+=rem;
+            num/=10; //last digit remove
+        }
+        cout<<sum<<endl;
+    }
+    return 0;
+}
