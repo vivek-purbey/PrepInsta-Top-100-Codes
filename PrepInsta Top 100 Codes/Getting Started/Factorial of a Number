@@ -1,0 +1,30 @@
+// Method-1 Iterative Approach --> T.C=O(n) and S.C=O(1) : 
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        int num; cin>>num;
+        long long fact=1;
+        for(int i=1;i<=num;i++) {
+            fact*=i;
+        }
+        cout<<fact<<endl;
+    }
+    return 0;
+}
+
+//Method-2 Recursive Approach --> T.C=O(n) and S.C=O(1) : 
+#include <iostream>
+using namespace std;
+long long fun(int num) {
+    if(num==0) return 1;
+    else  return num*fun(num-1);
+}
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        int num; cin>>num;
+        long long fact=fun(num);
+        cout<<fact<<endl;
+    }
+    return 0;
+}
