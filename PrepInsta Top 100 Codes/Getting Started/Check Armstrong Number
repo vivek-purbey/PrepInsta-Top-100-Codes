@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int num; cin>>num;
+    int temp=num;
+    int result=num;
+    int totalDigit=0, sum=0;
+    while(num!=0) {
+        int rem=num%10;
+        totalDigit++;
+        num/=10;
+    }
+    while(temp!=0) {
+        int rem=temp%10;
+        sum+=pow(rem, totalDigit);
+        temp/=10;
+    }
+    if(result==sum) cout<<"Armstrong";
+    else cout<<"Not Armstrong";
+    return 0;
+}
+//Method-2 By converting number into string to find the length of the number : 
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int num; cin>>num;
+    int result=num;
+    string str=to_string(num);
+    int len=str.size(), sum=0;
+    while(num!=0) {
+        int rem=num%10;
+        sum+=pow(rem, len);
+        num/=10;
+    }
+    if(sum==result) cout<<"Armstrong";
+    else cout<<"Not Armstrong";
+    return 0;
+}
