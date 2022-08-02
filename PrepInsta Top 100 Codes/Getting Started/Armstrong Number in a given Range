@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int lower, upper; cin>>lower>>upper;
+    for(int i=lower;i<=upper;i++) {
+        int num=i, result=i;
+        string s=to_string(num);
+        int len=s.size(), sum=0;
+        while(num!=0) {
+            int rem=num%10;
+            sum+=pow(rem, len);
+            num/=10;
+        }
+        if(sum==result) cout<<i<<" ";
+    }
+    cout<<endl;
+    return 0;
+}
+// same logic of armstrong number, just traverse a loop from lower limit to upper limit of armstrong number code.
