@@ -1,0 +1,11 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        double num; cin>>num;
+        if(floor(sqrt(num))==ceil(sqrt(num))) cout<<"YES"<<endl; // condition for perfect square
+        else cout<<"NO"<<endl;
+    }
+    return 0;
+}
