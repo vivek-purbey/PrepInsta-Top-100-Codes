@@ -1,0 +1,32 @@
+// Method-1 : Using Space Optimization technique : T.C=O(n) and S.C=O(1)
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        int num; cin>>num;
+        int a=0, b=1;
+        int sum=0;
+        for(int i=2;i<=num;i++) {
+            sum=a+b;
+            a=b;
+            b=sum;
+        }
+        cout<<sum<<endl; // cout<<b<<endl;
+    }
+    return 0;
+}
+// Method-2 : Using Recursion : T.C=Exponential bcz each call other two functions
+#include<bits/stdc++.h>
+using namespace std;
+int fib(int num) {
+    if(num<=1) return num;
+    else return fib(num-1)+fib(num-2);
+}
+
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        int num; cin>>num;
+        cout<<fib(num)<<endl;
+    }
+    return 0;
+}
