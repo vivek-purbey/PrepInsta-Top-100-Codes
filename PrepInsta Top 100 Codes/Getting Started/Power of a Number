@@ -1,0 +1,29 @@
+//Method-1 --> Using in-built function : 
+#include <iostream>
+#include <math.h> // cmath
+using namespace std;
+int main() {
+    int tc; cin>>tc; while(tc--) {
+        int base, expo; cin>>base>>expo;
+        long long result=pow(base, expo);
+        cout<<result<<endl;
+    }
+    return 0;
+}
+
+//Method-2 --> Using iterative approach : 
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+    int tc; cin>>tc; while(tc--) {
+    int base, expo; cin>>base>>expo;
+    long long res=1;
+    while(expo!=0) {
+        res*=base;
+        expo--;
+    }
+    cout<<res<<endl;
+    }
+    return 0;
+}
