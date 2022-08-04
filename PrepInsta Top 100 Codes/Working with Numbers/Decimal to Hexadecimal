@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int decimal; cin>>decimal;
+		char hexa[100]; // creating a char array to store hexadecimal equivalent
+		int i=0;
+		while(decimal!=0) {
+			int res=decimal%16;
+			if(res<10) {
+				hexa[i]=res+48; // Whenever rem < 10 : we will have [0 - 9] as values in place 
+				 // Note ASCII of 0 is 48
+			}
+			else {
+				hexa[i]=res+55; // else whenever remainder >= 10 we will have [A - F]
+				 // Note: ASCII A -> 65, B -> 66 ........ F -> 70
+			}
+			i++;
+			decimal/=16;
+		}
+		// to get result we need to read the array in opposite fashion
+		for(int j=i-1;j>=0;j--) {
+			cout<<hexa[j];
+		}
+		cout<<endl;
+	}
+	return 0;
+}
