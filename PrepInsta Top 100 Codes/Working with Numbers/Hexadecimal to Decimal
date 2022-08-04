@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		string hex; cin>>hex;
+		int len=hex.size();
+		int decimal=0, index=0;
+		for(int i=len-1;i>=0;i--) {
+			if(hex[i]>='0' and hex[i]<='9') {
+				int digit=int(hex[i])-48;
+				decimal+=digit*pow(16, index);
+			}
+			else {
+				int digit=int(hex[i])-55;
+				decimal+=digit*pow(16, index);
+			}
+			index++;
+		}
+		cout<<decimal<<endl;
+	}
+	return 0;
+}
+// Using inbuilt() :
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	string s; cin>>s;
+	cout<<stoi(s, 0, 16);
+	return 0;
+}
