@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int num; cin>>num;
+		int decimal=0, i=0;
+		while(num!=0) {
+			int rem=num%10;
+			decimal+=rem*pow(2,i);
+			num/=10;
+			i++;
+		}
+		cout<<decimal<<endl;
+	}
+	return 0;
+}
+//Method-2 : Using in-built()
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int num; cin>>num;
+	string s=to_string(num);
+	cout<<stoi(s, 0, 2);
+	return 0;
+}
