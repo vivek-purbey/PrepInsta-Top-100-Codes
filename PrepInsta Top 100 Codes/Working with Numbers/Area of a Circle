@@ -1,0 +1,10 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		double radius; cin>>radius;
+		double area=3.14*radius*radius;
+		cout<<area<<fixed<<setprecision(4)<<endl;
+	}
+	return 0;
+}
