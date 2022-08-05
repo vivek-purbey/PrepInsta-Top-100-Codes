@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int num; cin>>num;
+		string arr[]={"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", 
+		"eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", 
+		"nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
+		if(num>=10000) {
+			int leftDigit=num/1000;
+			cout<<arr[leftDigit]<<" thousand ";
+			num-=leftDigit*1000;
+		}
+		if(num>=1000) {
+			int leftDigit=num/1000;
+			cout<<arr[leftDigit]<<" thousand ";
+			num-=leftDigit*1000;
+		}
+		if(num>=100) {
+			int leftDigit=num/100;
+			cout<<arr[leftDigit]<<" hundred ";
+			num-=leftDigit*100;
+		}
+		if(num>20) {
+			int leftDigit=num/10;
+			cout<<arr[18+leftDigit]<<" ";
+			num-=leftDigit*10;
+		}
+		cout<<arr[num]<<endl;
+	}
+	return 0;
+}
