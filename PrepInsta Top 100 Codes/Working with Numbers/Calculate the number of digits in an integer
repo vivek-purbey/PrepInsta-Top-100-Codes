@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		long num; cin>>num;
+		long countDigit=0;
+		while(num!=0) {
+			int rem=num%10;
+			countDigit++;
+			num/=10;
+		}
+		cout<<countDigit<<endl;
+	}
+	return 0;
+}
