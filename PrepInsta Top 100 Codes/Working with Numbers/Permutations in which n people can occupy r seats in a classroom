@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int people, seat; cin>>people>>seat;
+		long fact1=1, fact2=1;
+		for(int i=1;i<=people;i++) {
+			fact1*=i;
+		}
+		int diff=abs(people-seat);
+		for(int i=1;i<=diff;i++) {
+			fact2*=i;
+		}
+		cout<<fact1/fact2<<endl;
+	}
+	return 0;
+}
+// T.C=O(n)
