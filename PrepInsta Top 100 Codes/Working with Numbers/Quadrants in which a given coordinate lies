@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int x, y; cin>>x>>y; // enter the co-ordinate of x and y axis
+		if(x==0 and y==0) cout<<"origin"<<endl;
+		else if(x>0 and y>0) cout<<"first"<<endl;
+		else if(x<0 and y>0) cout<<"second"<<endl;
+		else if(x<0 and y<0) cout<<"third"<<endl;
+		else if(x>0 and y<0) cout<<"fourth"<<endl;
+		else if(x!=0 and y==0) cout<<"x-axis"<<endl;
+		else if(x==0 and y!=0) cout<<"y-axis"<<endl;
+	}
+	return 0;
+}
