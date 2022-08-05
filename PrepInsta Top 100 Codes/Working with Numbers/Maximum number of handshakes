@@ -1,0 +1,9 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int totalPeople; cin>>totalPeople;
+		cout<<(totalPeople*(totalPeople-1))/2<<endl; // combination of nc2
+	}
+	return 0;
+}
