@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int num; cin>>num;
+		int arr[num], countEven=0, countOdd=0;
+		for(int i=0;i<num;i++) {
+			cin>>arr[i];
+			if(arr[i]%2==0) countEven++;
+			else countOdd++;
+		}
+		cout<<countEven<<" "<<countOdd<<endl;
+	}
+	return 0;
+}
