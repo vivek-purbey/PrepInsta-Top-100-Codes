@@ -1,0 +1,15 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main() {
+	int tc; cin>>tc; while(tc--) {
+		int num; cin>>num;
+		int arr[num], arrSum=0;
+		for(int i=0;i<num;i++) {
+			cin>>arr[i];
+			arrSum+=arr[i];
+		}
+		cout<<arrSum<<endl;
+	}
+	return 0;
+}
